@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="低轨卫星星座">
+  <defs>
+    <radialGradient id="bg7" cx="0.5" cy="0.6" r="0.75">
+      <stop offset="0" stop-color="#0a1430"/>
+      <stop offset="1" stop-color="#020610"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg7)"/>
+  <g fill="#dbeafe" opacity="0.8">
+    <circle cx="90" cy="70" r="2"/><circle cx="180" cy="140" r="1.6"/><circle cx="700" cy="90" r="2.2"/>
+    <circle cx="620" cy="200" r="1.5"/><circle cx="300" cy="60" r="1.8"/><circle cx="520" cy="48" r="1.6"/>
+    <circle cx="740" cy="330" r="1.7"/><circle cx="60" cy="210" r="1.5"/>
+  </g>
+  <circle cx="400" cy="470" r="260" fill="#0b2d5c" stroke="#60a5fa" stroke-width="3"/>
+  <g fill="none" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2">
+    <ellipse cx="400" cy="300" rx="300" ry="90" transform="rotate(-12 400 300)"/>
+    <ellipse cx="400" cy="300" rx="220" ry="64" transform="rotate(-12 400 300)" stroke-opacity="0.45"/>
+  </g>
+  <g fill="#bae6fd">
+    <rect x="150" y="286" width="16" height="10" rx="2" transform="rotate(-12 158 291)"/>
+    <rect x="380" y="236" width="16" height="10" rx="2" transform="rotate(-12 388 241)"/>
+    <rect x="618" y="206" width="16" height="10" rx="2" transform="rotate(-12 626 211)"/>
+  </g>
+  <g stroke="#7dd3fc" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="4 6">
+    <path d="M388 241L300 470M626 211L690 470"/>
+  </g>
+  <text x="46" y="86" fill="#e5f2ff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">LEO CONSTELLATION</text>
+  <text x="46" y="122" fill="#8fb6ea" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">低轨卫星星座示意</text>
+</svg>

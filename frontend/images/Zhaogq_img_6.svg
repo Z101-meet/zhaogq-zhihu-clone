@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="边缘计算开发套件">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a12"/>
+      <stop offset="1" stop-color="#14523a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)"/>
+  <g stroke="#3ee08f" stroke-opacity="0.22" stroke-width="1">
+    <path d="M0 90H800M0 180H800M0 270H800M0 360H800M0 450H800M80 0V500M160 0V500M240 0V500M320 0V500M400 0V500M480 0V500M560 0V500M640 0V500M720 0V500"/>
+  </g>
+  <g transform="translate(400 300)">
+    <rect x="-170" y="-120" width="340" height="240" rx="14" fill="#0d3b2a" stroke="#4ade80" stroke-width="3"/>
+    <rect x="-108" y="-62" width="120" height="120" rx="8" fill="#0f5132" stroke="#6ee7b7" stroke-width="2"/>
+    <text x="-88" y="10" fill="#bbf7d0" font-family="Consolas, monospace" font-size="30">AI</text>
+    <g fill="#4ade80">
+      <rect x="34" y="-80" width="96" height="12" rx="6"/>
+      <rect x="34" y="-46" width="96" height="12" rx="6"/>
+      <rect x="34" y="-12" width="64" height="12" rx="6" opacity="0.7"/>
+      <rect x="-140" y="94" width="280" height="10" rx="5" opacity="0.5"/>
+    </g>
+  </g>
+  <text x="46" y="86" fill="#dffded" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">EDGE AI</text>
+  <text x="46" y="122" fill="#86c9a9" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">边缘计算开发套件</text>
+</svg>

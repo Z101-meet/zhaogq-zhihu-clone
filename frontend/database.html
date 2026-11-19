@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- 姓名：赵国庆 | 学号：24002120201 | 时间：2026-11-19 | 大模型：DeepSeek-V4.1-Flash -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据库连接测试 | 科技新闻聚合平台</title>
+  <link rel="stylesheet" href="css/Zhaogq_style.css" />
+</head>
+<body class="Zhaogq_body">
+  <header class="Zhaogq_header">
+    <div class="Zhaogq_brand">
+      <span class="Zhaogq_logo">Z</span>
+      <span>Zhaogq Tech News</span>
+    </div>
+    <div class="Zhaogq_status" id="Zhaogq_status">
+      <span class="Zhaogq_dot"></span>
+      <span id="Zhaogq_statusText">检测后端服务中…</span>
+    </div>
+  </header>
+
+  <main class="Zhaogq_main">
+    <div class="Zhaogq_pageHead">
+      <a class="Zhaogq_back" href="index.html">← 返回首页</a>
+      <h1>数据库连接测试</h1>
+      <p>填写 MySQL 连接信息，点击测试按钮即可校验数据库是否可连接，成功与失败都会给出明确提示。</p>
+    </div>
+
+    <div class="Zhaogq_apiBar">
+      <strong>POST</strong>
+      <span class="Zhaogq_apiUrl" id="Zhaogq_apiUrl"></span>
+    </div>
+
+    <section class="Zhaogq_panel">
+      <form class="Zhaogq_form" id="Zhaogq_dbForm" novalidate>
+        <div class="Zhaogq_field">
+          <label for="Zhaogq_host">主机地址</label>
+          <input type="text" id="Zhaogq_host" name="host" value="localhost" autocomplete="off" />
+        </div>
+        <div class="Zhaogq_field">
+          <label for="Zhaogq_port">端口</label>
+          <input type="number" id="Zhaogq_port" name="port" value="3306" min="1" max="65535" />
+        </div>
+        <div class="Zhaogq_field">
+          <label for="Zhaogq_user">用户名</label>
+          <input type="text" id="Zhaogq_user" name="user" value="root" autocomplete="off" />
+        </div>
+        <div class="Zhaogq_field">
+          <label for="Zhaogq_password">密码</label>
+          <input type="password" id="Zhaogq_password" name="password" value="123456" autocomplete="off" />
+        </div>
+        <div class="Zhaogq_field">
+          <label for="Zhaogq_database">数据库名</label>
+          <input type="text" id="Zhaogq_database" name="database" value="zhaogq_tech_news" autocomplete="off" />
+        </div>
+      </form>
+
+      <div class="Zhaogq_actions">
+        <button class="Zhaogq_btn" type="submit" form="Zhaogq_dbForm" id="Zhaogq_testBtn">测试连接</button>
+        <button class="Zhaogq_btn Zhaogq_btnGhost" type="reset" form="Zhaogq_dbForm">重置表单</button>
+      </div>
+
+      <p class="Zhaogq_hint">默认账号取自项目 <code>backend/.env</code> 配置；测试结果同时会输出到浏览器控制台。</p>
+
+      <div class="Zhaogq_result" id="Zhaogq_result">
+        <div class="Zhaogq_resultTitle" id="Zhaogq_resultTitle"></div>
+        <dl class="Zhaogq_kv" id="Zhaogq_resultBody"></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="Zhaogq_footer">
+    <span>赵国庆 · 24002120201 · 2026</span>
+    <span><a href="index.html">首页</a> · <a href="news.html">科技新闻</a></span>
+  </footer>
+
+  <script src="js/Zhaogq_common.js"></script>
+  <script src="js/Zhaogq_database.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "zhaogq-tech-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "赵国庆 - 科技新闻聚合平台（Node.js + Express + MySQL 全栈项目）",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.3"
+  }
+}

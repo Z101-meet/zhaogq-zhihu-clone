@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="量子芯片低温测量">
+  <defs>
+    <radialGradient id="bg3" cx="0.5" cy="0.55" r="0.7">
+      <stop offset="0" stop-color="#0b3b46"/>
+      <stop offset="1" stop-color="#04121d"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)"/>
+  <g fill="none" stroke="#2ee6d6" stroke-opacity="0.75">
+    <ellipse cx="400" cy="290" rx="230" ry="80" stroke-width="3"/>
+    <ellipse cx="400" cy="290" rx="170" ry="58" stroke-width="2" stroke-opacity="0.6"/>
+    <ellipse cx="400" cy="290" rx="110" ry="36" stroke-width="2" stroke-opacity="0.45"/>
+    <ellipse cx="400" cy="290" rx="52" ry="17" stroke-width="2" stroke-opacity="0.3"/>
+  </g>
+  <circle cx="400" cy="290" r="26" fill="#9ef7ff"/>
+  <circle cx="400" cy="290" r="48" fill="none" stroke="#9ef7ff" stroke-opacity="0.5" stroke-width="2"/>
+  <g stroke="#8ef2ff" stroke-opacity="0.5" stroke-width="2">
+    <path d="M400 120V242M400 338V460M170 290H352M448 290H630"/>
+  </g>
+  <circle cx="400" cy="120" r="7" fill="#8ef2ff"/>
+  <circle cx="400" cy="460" r="7" fill="#8ef2ff"/>
+  <circle cx="170" cy="290" r="7" fill="#8ef2ff"/>
+  <circle cx="630" cy="290" r="7" fill="#8ef2ff"/>
+  <text x="46" y="86" fill="#d6feff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">QUANTUM</text>
+  <text x="46" y="122" fill="#7ed6d0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">量子芯片低温测量装置</text>
+</svg>

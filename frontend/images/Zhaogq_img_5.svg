@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="自动驾驶测试车">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1024"/>
+      <stop offset="1" stop-color="#1b2b63"/>
+    </linearGradient>
+    <linearGradient id="road5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e3a8a" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#60a5fa" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#1e3a8a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg5)"/>
+  <rect x="0" y="380" width="800" height="120" fill="#0b1530"/>
+  <rect x="80" y="372" width="640" height="6" fill="url(#road5)"/>
+  <g transform="translate(400 320)">
+    <path d="M-150 40 L-120 -10 L-60 -40 L60 -40 L120 -10 L150 40 Z" fill="#2b4c9b"/>
+    <path d="M-64 -36 L-44 -78 L44 -78 L64 -36 Z" fill="#0f1c3d" stroke="#5aa6ff" stroke-width="3"/>
+    <circle cx="-86" cy="44" r="26" fill="#0a1128" stroke="#5aa6ff" stroke-width="4"/>
+    <circle cx="86" cy="44" r="26" fill="#0a1128" stroke="#5aa6ff" stroke-width="4"/>
+    <rect x="-14" y="-96" width="28" height="16" rx="8" fill="#7dd3fc"/>
+  </g>
+  <g stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" fill="none">
+    <path d="M320 220 L220 140 L120 180"/>
+    <path d="M480 220 L580 140 L700 180"/>
+    <path d="M400 224 L400 120"/>
+  </g>
+  <text x="46" y="86" fill="#e0ebff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">AUTONOMOUS</text>
+  <text x="46" y="122" fill="#8fb6ea" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">城市道路自动驾驶测试车</text>
+</svg>

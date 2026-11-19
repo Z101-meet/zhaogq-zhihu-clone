@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="液冷数据中心机房">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#04141f"/>
+      <stop offset="1" stop-color="#0b3f57"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  <g fill="#0d5c78" stroke="#33c6e8" stroke-opacity="0.65" stroke-width="2">
+    <rect x="110" y="170" width="120" height="250" rx="8"/>
+    <rect x="270" y="140" width="120" height="280" rx="8"/>
+    <rect x="430" y="190" width="120" height="230" rx="8"/>
+    <rect x="590" y="160" width="120" height="260" rx="8"/>
+  </g>
+  <g stroke="#7ce8ff" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M60 300H110M170 240H200V300H270M330 210H390V240H430M490 260H540V210H590"/>
+    <path d="M240 420V380H450V420"/>
+  </g>
+  <g fill="#9ef7ff">
+    <circle cx="110" cy="300" r="6"/><circle cx="270" cy="240" r="6"/>
+    <circle cx="430" cy="240" r="6"/><circle cx="590" cy="210" r="6"/>
+  </g>
+  <text x="46" y="86" fill="#dff9ff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">LIQUID COOLING</text>
+  <text x="46" y="122" fill="#85cfe6" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">液冷数据中心机房</text>
+</svg>

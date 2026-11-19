@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="智能分拣机械臂">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241305"/>
+      <stop offset="1" stop-color="#6b3a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg8)"/>
+  <g stroke="#f59e0b" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 100H800M0 200H800M0 300H800M0 400H800M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/>
+  </g>
+  <g fill="none" stroke="#fbbf24" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 430 L300 300 L440 220 L580 300"/>
+  </g>
+  <g fill="#fcd34d">
+    <circle cx="300" cy="300" r="18"/><circle cx="440" cy="220" r="16"/><circle cx="580" cy="300" r="14"/>
+  </g>
+  <g stroke="#fde68a" stroke-width="7" stroke-linecap="round">
+    <path d="M568 314 L556 352"/><path d="M592 314 L604 352"/>
+  </g>
+  <rect x="520" y="380" width="120" height="70" rx="8" fill="none" stroke="#fbbf24" stroke-width="5"/>
+  <g fill="#fef3c7">
+    <rect x="542" y="398" width="24" height="18" rx="3"/>
+    <rect x="580" y="398" width="24" height="18" rx="3"/>
+  </g>
+  <text x="46" y="86" fill="#fff5e0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">ROBOT SORTING</text>
+  <text x="46" y="122" fill="#e0b487" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">智能分拣机械臂</text>
+</svg>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- 姓名：赵国庆 | 学号：24002120201 | 时间：2026-11-19 | 大模型：DeepSeek-V4.1-Flash -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>科技新闻聚合平台 | 赵国庆 24002120201</title>
+  <link rel="stylesheet" href="css/Zhaogq_style.css" />
+</head>
+<body class="Zhaogq_body">
+  <canvas id="Zhaogq_canvas" class="Zhaogq_canvas"></canvas>
+
+  <header class="Zhaogq_header">
+    <div class="Zhaogq_brand">
+      <span class="Zhaogq_logo">Z</span>
+      <span>Zhaogq Tech News</span>
+    </div>
+    <div class="Zhaogq_status" id="Zhaogq_status">
+      <span class="Zhaogq_dot"></span>
+      <span id="Zhaogq_statusText">检测后端服务中…</span>
+    </div>
+  </header>
+
+  <main class="Zhaogq_main">
+    <section class="Zhaogq_hero">
+      <p class="Zhaogq_badge">VIBE CODING · 全栈实践</p>
+      <h1 class="Zhaogq_title">科技新闻聚合平台</h1>
+      <p class="Zhaogq_subtitle">
+        基于原生 HTML / CSS / JavaScript 构建前端，Node.js + Express 提供 RESTful 接口，MySQL 存储科技新闻与图文资讯数据。
+      </p>
+      <ul class="Zhaogq_meta">
+        <li><span>姓名</span><strong>赵国庆</strong></li>
+        <li><span>学号</span><strong>24002120201</strong></li>
+        <li><span>项目名称</span><strong>科技新闻聚合平台</strong></li>
+        <li><span>项目类别</span><strong>自选（原创）</strong></li>
+      </ul>
+    </section>
+
+    <nav class="Zhaogq_nav" aria-label="功能导航">
+      <a class="Zhaogq_navCard" href="database.html">
+        <span class="Zhaogq_navIndex">01 / DATABASE</span>
+        <h2>数据库连接测试</h2>
+        <p>输入 MySQL 主机、账号与密码，实时校验数据库连接状态并查看数据表。</p>
+        <span class="Zhaogq_navArrow">进入页面 →</span>
+      </a>
+      <a class="Zhaogq_navCard" href="news.html">
+        <span class="Zhaogq_navIndex">02 / NEWS</span>
+        <h2>科技新闻列表</h2>
+        <p>从 MySQL 数据表读取科技新闻，支持关键词搜索、分类筛选与分页浏览。</p>
+        <span class="Zhaogq_navArrow">进入页面 →</span>
+      </a>
+      <a class="Zhaogq_navCard" href="gallery.html">
+        <span class="Zhaogq_navIndex">03 / GALLERY</span>
+        <h2>图文资讯列表</h2>
+        <p>以图文卡片形式展示科技场景，图片资源由项目本地 images 目录提供。</p>
+        <span class="Zhaogq_navArrow">进入页面 →</span>
+      </a>
+    </nav>
+
+    <section>
+      <h2 class="Zhaogq_sectionTitle">全部页面</h2>
+      <ul class="Zhaogq_pageList">
+        <li><a href="index.html">首页导航 <em>index.html</em></a></li>
+        <li><a href="database.html">数据库连接测试 <em>database.html</em></a></li>
+        <li><a href="news.html">科技新闻列表 <em>news.html</em></a></li>
+        <li><a href="gallery.html">图文资讯列表 <em>gallery.html</em></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="Zhaogq_footer">
+    <span>赵国庆 · 24002120201 · 2026</span>
+    <span>Node.js + Express + MySQL · <a href="news.html">查看接口数据</a></span>
+  </footer>
+
+  <script src="js/Zhaogq_common.js"></script>
+  <script src="js/Zhaogq_index.js"></script>
+</body>
+</html>

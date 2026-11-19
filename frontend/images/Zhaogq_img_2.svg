@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="折叠屏铰链测试">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#150a24"/>
+      <stop offset="1" stop-color="#5b1f7a"/>
+    </linearGradient>
+    <linearGradient id="screen2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset="0.5" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <g stroke="#a855f7" stroke-opacity="0.25" stroke-width="1">
+    <path d="M0 120H800M0 240H800M0 360H800M160 0V500M320 0V500M480 0V500M640 0V500"/>
+  </g>
+  <g transform="translate(400 260)">
+    <path d="M-190 -120 L0 -70 L0 110 L-190 160 Z" fill="url(#screen2)" opacity="0.85"/>
+    <path d="M190 -120 L0 -70 L0 110 L190 160 Z" fill="url(#screen2)" opacity="0.6"/>
+    <path d="M0 -70 L0 110" stroke="#e9d5ff" stroke-width="6"/>
+    <circle cx="0" cy="-70" r="10" fill="#f5f3ff"/>
+    <circle cx="0" cy="110" r="10" fill="#f5f3ff"/>
+  </g>
+  <text x="46" y="86" fill="#f4e9ff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">FOLD TEST</text>
+  <text x="46" y="122" fill="#c9a8e8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">折叠屏铰链耐久测试台</text>
+</svg>
