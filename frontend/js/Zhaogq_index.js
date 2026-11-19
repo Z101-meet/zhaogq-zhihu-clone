@@ -10,7 +10,7 @@
   let Zhaogq_height = 0;
   let Zhaogq_points = [];
   const Zhaogq_mouse = { Zhaogq_x: -9999, Zhaogq_y: -9999 };
-  const Zhaogq_colors = ['77, 208, 255', '124, 108, 255', '143, 230, 255'];
+  const Zhaogq_colors = ['5, 109, 232', '64, 128, 214', '10, 90, 190'];
 
   /* 按屏幕面积生成粒子 */
   function Zhaogq_createPoints() {
@@ -63,7 +63,7 @@
 
       Zhaogq_ctx.beginPath();
       Zhaogq_ctx.arc(Zhaogq_p.Zhaogq_x, Zhaogq_p.Zhaogq_y, Zhaogq_p.Zhaogq_r, 0, Math.PI * 2);
-      Zhaogq_ctx.fillStyle = 'rgba(' + Zhaogq_p.Zhaogq_color + ', 0.85)';
+      Zhaogq_ctx.fillStyle = 'rgba(' + Zhaogq_p.Zhaogq_color + ', 0.55)';
       Zhaogq_ctx.fill();
     }
 
@@ -75,11 +75,11 @@
         const Zhaogq_b = Zhaogq_points[Zhaogq_j];
         const Zhaogq_gap = Math.hypot(Zhaogq_a.Zhaogq_x - Zhaogq_b.Zhaogq_x, Zhaogq_a.Zhaogq_y - Zhaogq_b.Zhaogq_y);
         if (Zhaogq_gap < Zhaogq_linkDist) {
-          const Zhaogq_alpha = (1 - Zhaogq_gap / Zhaogq_linkDist) * 0.28;
+          const Zhaogq_alpha = (1 - Zhaogq_gap / Zhaogq_linkDist) * 0.16;
           Zhaogq_ctx.beginPath();
           Zhaogq_ctx.moveTo(Zhaogq_a.Zhaogq_x, Zhaogq_a.Zhaogq_y);
           Zhaogq_ctx.lineTo(Zhaogq_b.Zhaogq_x, Zhaogq_b.Zhaogq_y);
-          Zhaogq_ctx.strokeStyle = 'rgba(90, 170, 255, ' + Zhaogq_alpha.toFixed(3) + ')';
+          Zhaogq_ctx.strokeStyle = 'rgba(5, 109, 232, ' + Zhaogq_alpha.toFixed(3) + ')';
           Zhaogq_ctx.lineWidth = 1;
           Zhaogq_ctx.stroke();
         }

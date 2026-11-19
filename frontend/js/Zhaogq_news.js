@@ -19,28 +19,31 @@
   Zhaogq_apiUrlEl.textContent = Zhaogq_getApiUrl('/Zhaogq/news');
   Zhaogq_apiUrlEl.href = Zhaogq_getApiUrl('/Zhaogq/news?page=1&pageSize=6');
 
-  /* 渲染新闻卡片 */
+  /* 渲染新闻卡片（仿知乎热榜：排名 + 标题 + 摘要 + 缩略图） */
   function Zhaogq_render(Zhaogq_list) {
     if (!Zhaogq_list.length) {
       Zhaogq_listEl.innerHTML = '<div class="Zhaogq_empty">没有找到匹配的新闻，请调整关键词或分类。</div>';
       return;
     }
 
-    Zhaogq_listEl.innerHTML = Zhaogq_list.map((Zhaogq_item) => {
+    Zhaogq_listEl.innerHTML = Zhaogq_list.map((Zhaogq_item, Zhaogq_index) => {
       const Zhaogq_cover = Zhaogq_item.Zhaogq_cover || 'images/Zhaogq_img_1.svg';
+      const Zhaogq_rank = (Zhaogq_state.Zhaogq_page - 1) * Zhaogq_pageSize + Zhaogq_index + 1;
       return '<article class="Zhaogq_newsCard">' +
-        '<img class="Zhaogq_newsCover" src="' + Zhaogq_escapeHtml(Zhaogq_cover) + '" alt="' +
-        Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_title) + '" loading="lazy" />' +
+        '<span class="Zhaogq_rank' + (Zhaogq_rank <= 3 ? ' isTop' : '') + '">' + Zhaogq_rank + '</span>' +
         '<div class="Zhaogq_newsBody">' +
         '<span class="Zhaogq_tag">' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_category) + '</span>' +
         '<h3>' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_title) + '</h3>' +
         '<p class="Zhaogq_summary">' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_summary) + '</p>' +
         '<div class="Zhaogq_metaRow">' +
-        '<span>作者：' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_author) + '</span>' +
+        '<span>' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_author) + ' 发布于 ' +
+        Zhaogq_formatTime(Zhaogq_item.Zhaogq_publish_time) + '</span>' +
         '<span>来源：' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_source) + '</span>' +
-        '<span>发布：' + Zhaogq_formatTime(Zhaogq_item.Zhaogq_publish_time) + '</span>' +
-        '<span>浏览：' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_views) + '</span>' +
-        '</div></div></article>';
+        '<span>' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_views) + ' 次浏览</span>' +
+        '</div></div>' +
+        '<img class="Zhaogq_newsCover" src="' + Zhaogq_escapeHtml(Zhaogq_cover) + '" alt="' +
+        Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_title) + '" loading="lazy" />' +
+        '</article>';
     }).join('');
   }
 

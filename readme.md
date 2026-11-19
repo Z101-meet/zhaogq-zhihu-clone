@@ -1,10 +1,12 @@
-# 科技新闻聚合平台
+# 知乎制作和模仿
 
 - 姓名：赵国庆
 - 学号：24002120201
-- 项目名称：科技新闻聚合平台
-- 项目类别：自选（原创）
+- 项目名称：知乎制作和模仿
+- 项目类别：模仿
 - 技术栈：原生 HTML / CSS / JavaScript + Node.js / Express + MySQL
+
+仿知乎问答社区风格的信息流站点：顶部导航、科技热榜式新闻列表、图文「想法」卡片、数据库连接测试页。
 
 ## 启动方式
 
@@ -25,10 +27,10 @@
 │   └── Zhaogq_database.md   数据库变更记录
 ├── frontend/             前端静态页面
 │   ├── css/ js/ images/ fonts/
-│   ├── index.html        首页（canvas 粒子背景）
+│   ├── index.html        首页（仿知乎导航 + canvas 粒子背景）
 │   ├── database.html     数据库连接测试
-│   ├── news.html         科技新闻列表
-│   └── gallery.html      图文资讯列表
+│   ├── news.html         科技新闻列表（仿热榜）
+│   └── gallery.html      图文资讯列表（仿想法）
 ├── AGENTS.md             项目开发规则
 ├── Zhaogq_prompt.md      开发指令记录
 └── 启动后端.bat          后端启动脚本

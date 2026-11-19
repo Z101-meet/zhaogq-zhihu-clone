@@ -4,35 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>科技新闻聚合平台 | 赵国庆 24002120201</title>
+  <title>知乎制作和模仿 | 赵国庆 24002120201</title>
   <link rel="stylesheet" href="css/Zhaogq_style.css" />
 </head>
 <body class="Zhaogq_body">
   <canvas id="Zhaogq_canvas" class="Zhaogq_canvas"></canvas>
 
-  <header class="Zhaogq_header">
-    <div class="Zhaogq_brand">
-      <span class="Zhaogq_logo">Z</span>
-      <span>Zhaogq Tech News</span>
-    </div>
-    <div class="Zhaogq_status" id="Zhaogq_status">
-      <span class="Zhaogq_dot"></span>
-      <span id="Zhaogq_statusText">检测后端服务中…</span>
+  <header class="Zhaogq_topbar">
+    <div class="Zhaogq_topbarInner">
+      <a class="Zhaogq_logo" href="index.html">知乎</a>
+      <nav class="Zhaogq_topnav" aria-label="站点导航">
+        <a href="index.html" class="isActive">首页</a>
+        <a href="news.html">科技新闻</a>
+        <a href="gallery.html">图文资讯</a>
+        <a href="database.html">数据库测试</a>
+      </nav>
+      <div class="Zhaogq_topRight">
+        <div class="Zhaogq_status" id="Zhaogq_status">
+          <span class="Zhaogq_dot"></span>
+          <span id="Zhaogq_statusText">检测后端服务中…</span>
+        </div>
+        <button class="Zhaogq_loginBtn" type="button">登录</button>
+      </div>
     </div>
   </header>
 
   <main class="Zhaogq_main">
-    <section class="Zhaogq_hero">
-      <p class="Zhaogq_badge">VIBE CODING · 全栈实践</p>
-      <h1 class="Zhaogq_title">科技新闻聚合平台</h1>
+    <section class="Zhaogq_heroCard">
+      <p class="Zhaogq_badge">模仿站点 · VIBE CODING 全栈实践</p>
+      <h1 class="Zhaogq_title">知乎制作和模仿</h1>
       <p class="Zhaogq_subtitle">
-        基于原生 HTML / CSS / JavaScript 构建前端，Node.js + Express 提供 RESTful 接口，MySQL 存储科技新闻与图文资讯数据。
+        以知乎问答社区为原型，模仿其顶部导航、信息流卡片、科技热榜与图文想法样式；前端使用原生 HTML / CSS / JavaScript，
+        后端 Node.js + Express 提供 RESTful 接口，MySQL 存储新闻与图文数据。
       </p>
       <ul class="Zhaogq_meta">
         <li><span>姓名</span><strong>赵国庆</strong></li>
         <li><span>学号</span><strong>24002120201</strong></li>
-        <li><span>项目名称</span><strong>科技新闻聚合平台</strong></li>
-        <li><span>项目类别</span><strong>自选（原创）</strong></li>
+        <li><span>项目名称</span><strong>知乎制作和模仿</strong></li>
+        <li><span>项目类别</span><strong>模仿</strong></li>
       </ul>
     </section>
 
@@ -46,13 +55,13 @@
       <a class="Zhaogq_navCard" href="news.html">
         <span class="Zhaogq_navIndex">02 / NEWS</span>
         <h2>科技新闻列表</h2>
-        <p>从 MySQL 数据表读取科技新闻，支持关键词搜索、分类筛选与分页浏览。</p>
+        <p>仿知乎热榜的信息流卡片，数据来自 MySQL 数据表 Zhaogq_news，支持搜索与分页。</p>
         <span class="Zhaogq_navArrow">进入页面 →</span>
       </a>
       <a class="Zhaogq_navCard" href="gallery.html">
         <span class="Zhaogq_navIndex">03 / GALLERY</span>
         <h2>图文资讯列表</h2>
-        <p>以图文卡片形式展示科技场景，图片资源由项目本地 images 目录提供。</p>
+        <p>仿知乎「想法」的图文卡片，数据来自数据表 Zhaogq_gallery，图片由项目本地提供。</p>
         <span class="Zhaogq_navArrow">进入页面 →</span>
       </a>
     </nav>
@@ -70,7 +79,7 @@
 
   <footer class="Zhaogq_footer">
     <span>赵国庆 · 24002120201 · 2026</span>
-    <span>Node.js + Express + MySQL · <a href="news.html">查看接口数据</a></span>
+    <span>项目类别：模仿 · <a href="news.html">查看接口数据</a></span>
   </footer>
 
   <script src="js/Zhaogq_common.js"></script>

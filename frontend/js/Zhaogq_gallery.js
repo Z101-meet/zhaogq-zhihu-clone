@@ -10,7 +10,7 @@
   Zhaogq_apiUrlEl.textContent = Zhaogq_getApiUrl('/Zhaogq/gallery');
   Zhaogq_apiUrlEl.href = Zhaogq_getApiUrl('/Zhaogq/gallery');
 
-  /* 渲染图文卡片 */
+  /* 渲染图文卡片（仿知乎想法：作者信息 + 图片 + 描述） */
   function Zhaogq_render(Zhaogq_list) {
     if (!Zhaogq_list.length) {
       Zhaogq_galleryEl.innerHTML = '<div class="Zhaogq_empty">暂无图文资讯数据。</div>';
@@ -19,12 +19,21 @@
 
     Zhaogq_galleryEl.innerHTML = Zhaogq_list.map((Zhaogq_item) => {
       return '<article class="Zhaogq_galleryCard">' +
+        '<div class="Zhaogq_galleryHead">' +
+        '<span class="Zhaogq_avatar">赵</span>' +
+        '<div class="Zhaogq_author">' +
+        '<strong>赵国庆</strong>' +
+        '<span>发布于 ' + Zhaogq_formatTime(Zhaogq_item.Zhaogq_create_time) + '</span>' +
+        '</div></div>' +
         '<img class="Zhaogq_galleryImg" src="' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_image) +
         '" alt="' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_title) + '" loading="lazy" />' +
         '<div class="Zhaogq_galleryBody">' +
-        '<span class="Zhaogq_tag">' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_tech) + '</span>' +
         '<h3>' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_title) + '</h3>' +
         '<p>' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_description) + '</p>' +
+        '</div>' +
+        '<div class="Zhaogq_galleryFoot">' +
+        '<span class="Zhaogq_tag">' + Zhaogq_escapeHtml(Zhaogq_item.Zhaogq_tech) + '</span>' +
+        '<span class="Zhaogq_like">科技图文</span>' +
         '</div></article>';
     }).join('');
   }
