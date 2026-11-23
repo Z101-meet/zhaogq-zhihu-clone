@@ -4,6 +4,7 @@ const Zhaogq_newsController = require('../controllers/Zhaogq_newsController');
 const Zhaogq_galleryController = require('../controllers/Zhaogq_galleryController');
 const Zhaogq_dbController = require('../controllers/Zhaogq_dbController');
 const Zhaogq_chatController = require('../controllers/Zhaogq_chatController');
+const Zhaogq_kbController = require('../controllers/Zhaogq_kbController');
 
 const Zhaogq_router = express.Router();
 
@@ -24,5 +25,12 @@ Zhaogq_router.get('/Zhaogq/gallery', Zhaogq_galleryController.Zhaogq_getGalleryL
 
 /* AI 聊天（代理 SiliconFlow） */
 Zhaogq_router.post('/Zhaogq/chat', Zhaogq_chatController.Zhaogq_chat);
+
+/* 知识库（RAG）：上传解析、管理、问答 */
+Zhaogq_router.post('/Zhaogq/kb/upload', Zhaogq_kbController.Zhaogq_uploadMiddleware, Zhaogq_kbController.Zhaogq_uploadFile);
+Zhaogq_router.get('/Zhaogq/kb/files', Zhaogq_kbController.Zhaogq_getFiles);
+Zhaogq_router.get('/Zhaogq/kb/files/:id/chunks', Zhaogq_kbController.Zhaogq_getFileChunks);
+Zhaogq_router.delete('/Zhaogq/kb/files/:id', Zhaogq_kbController.Zhaogq_deleteFile);
+Zhaogq_router.post('/Zhaogq/kb/ask', Zhaogq_kbController.Zhaogq_ask);
 
 module.exports = Zhaogq_router;

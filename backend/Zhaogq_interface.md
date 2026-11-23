@@ -232,3 +232,139 @@
 ```
 
 - 修改时间：2026-11-23 14:45:00
+
+---
+
+## 2026-11-23 · 知识库（RAG）
+
+### 接口路径：`/api/Zhaogq/kb/upload`
+
+- HTTP 方法：POST（multipart/form-data）
+- 请求参数：
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| file | file | 是 | 支持 doc / docx / ppt / pptx / pdf / txt / md，单个不超过 20MB |
+
+- 请求示例：`curl -X POST http://localhost:8201/api/Zhaogq/kb/upload -F "file=@星图智能客服手册.docx"`
+- 响应格式（成功示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "上传并解析成功",
+  "data": {
+    "Zhaogq_id": 9,
+    "Zhaogq_name": "星图智能客服手册.docx",
+    "Zhaogq_ext": "docx",
+    "Zhaogq_size": 10664,
+    "Zhaogq_chunkCount": 2,
+    "Zhaogq_textLength": 659
+  }
+}
+```
+
+- 修改时间：2026-11-23 14:55:00
+
+### 接口路径：`/api/Zhaogq/kb/files`
+
+- HTTP 方法：GET
+- 请求参数：无
+- 响应格式（JSON 示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": {
+    "Zhaogq_list": [
+      {
+        "Zhaogq_id": 1,
+        "Zhaogq_name": "星图智能客服手册.docx",
+        "Zhaogq_ext": "docx",
+        "Zhaogq_size": 10664,
+        "Zhaogq_chunk_count": 2,
+        "Zhaogq_create_time": "2026-11-23T06:51:16.000Z"
+      }
+    ],
+    "Zhaogq_total": 8
+  }
+}
+```
+
+- 修改时间：2026-11-23 14:55:00
+
+### 接口路径：`/api/Zhaogq/kb/files/:id/chunks`
+
+- HTTP 方法：GET
+- 请求参数：路径参数 `id`（文件 ID）
+- 请求示例：`GET http://localhost:8201/api/Zhaogq/kb/files/1/chunks`
+- 响应格式（JSON 示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "查询成功",
+  "data": {
+    "Zhaogq_file": { "id": 1, "name": "星图智能客服手册.docx" },
+    "Zhaogq_list": [
+      { "Zhaogq_id": 1, "Zhaogq_chunk_index": 1, "Zhaogq_content": "星图智能客服手册\n一、公司简介……" }
+    ]
+  }
+}
+```
+
+- 修改时间：2026-11-23 14:55:00
+
+### 接口路径：`/api/Zhaogq/kb/files/:id`
+
+- HTTP 方法：DELETE
+- 请求参数：路径参数 `id`（文件 ID）
+- 响应格式（JSON 示例）：
+
+```json
+{ "code": 0, "msg": "删除成功", "data": { "Zhaogq_id": 9 } }
+```
+
+- 修改时间：2026-11-23 14:55:00
+
+### 接口路径：`/api/Zhaogq/kb/ask`
+
+- HTTP 方法：POST（Content-Type: application/json）
+- 请求参数（含示例）：
+
+```json
+{ "question": "退换货政策是什么？" }
+```
+
+- 说明：先对知识库片段做关键词召回（Top4），再拼装【参考资料】调用 SiliconFlow 大模型；检索结果、发送给大模型与接收到的数据均打印在服务端控制台。
+- 响应格式（JSON 示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "问答成功",
+  "data": {
+    "answer": "根据星图智能客服手册，退换货政策如下：……",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "usage": { "prompt_tokens": 820, "completion_tokens": 210, "total_tokens": 1030 },
+    "sources": [
+      {
+        "Zhaogq_fileId": 1,
+        "Zhaogq_file": "星图智能客服手册.docx",
+        "Zhaogq_chunkIndex": 1,
+        "Zhaogq_score": 28,
+        "Zhaogq_content": "星图智能客服手册\n一、公司简介……"
+      }
+    ]
+  }
+}
+```
+
+- 失败示例：
+
+```json
+{ "code": 3, "msg": "知识库为空，请先上传文件", "data": null }
+```
+
+- 修改时间：2026-11-23 14:55:00

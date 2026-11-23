@@ -1,6 +1,7 @@
 # 依赖与本地配置
 node_modules/
 .env
+backend/uploads/
 *.log
 .DS_Store
 .trae-html-share-packages/
