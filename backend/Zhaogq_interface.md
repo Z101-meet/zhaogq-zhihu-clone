@@ -177,3 +177,58 @@
 ```
 
 - 修改时间：2026-11-19 10:40:00
+
+---
+
+## 2026-11-23 · AI 聊天（代理 SiliconFlow）
+
+### 接口路径：`/api/Zhaogq/chat`
+
+- HTTP 方法：POST（Content-Type: application/json）
+- 请求参数（含示例）：
+
+```json
+{
+  "messages": [
+    { "role": "user", "content": "你好，请介绍一下你自己" }
+  ]
+}
+```
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| messages | array | 是 | 对话消息列表，元素为 `{ role, content }`，role 支持 system / user / assistant |
+| model | string | 否 | 模型名，默认 `deepseek-ai/DeepSeek-V4-Flash` |
+
+- 说明：后端自动在最前面追加 system 消息「你是一个有用的助手」；API Key 读取 `backend/.env` 的 `SILICONFLOW_API_KEY`，不返回给前端；发送给大模型与从大模型接收的完整数据均打印在服务端控制台。
+- 请求示例：`POST http://localhost:8201/api/Zhaogq/chat`
+- 响应格式（成功示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": {
+    "reply": "你好，我是 AI 聊天助手……",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "usage": {
+      "prompt_tokens": 15,
+      "completion_tokens": 39,
+      "total_tokens": 54
+    },
+    "Zhaogq_duration": 5011
+  }
+}
+```
+
+- 响应格式（失败示例）：
+
+```json
+{
+  "code": 401,
+  "msg": "大模型接口调用失败",
+  "data": null
+}
+```
+
+- 修改时间：2026-11-23 14:45:00

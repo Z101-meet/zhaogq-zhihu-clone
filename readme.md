@@ -6,7 +6,7 @@
 - 项目类别：模仿
 - 技术栈：原生 HTML / CSS / JavaScript + Node.js / Express + MySQL
 
-仿知乎问答社区风格的信息流站点：顶部导航、科技热榜式新闻列表、图文「想法」卡片、数据库连接测试页。
+仿知乎问答社区风格的信息流站点：顶部导航、科技热榜式新闻列表、图文「想法」卡片、数据库连接测试页、AI 聊天页（调用 SiliconFlow 大模型）。
 
 ## 启动方式
 
@@ -30,7 +30,8 @@
 │   ├── index.html        首页（仿知乎导航 + canvas 粒子背景）
 │   ├── database.html     数据库连接测试
 │   ├── news.html         科技新闻列表（仿热榜）
-│   └── gallery.html      图文资讯列表（仿想法）
+│   ├── gallery.html      图文资讯列表（仿想法）
+│   └── chat.html         AI 聊天（调用 SiliconFlow 大模型）
 ├── AGENTS.md             项目开发规则
 ├── Zhaogq_prompt.md      开发指令记录
 └── 启动后端.bat          后端启动脚本
@@ -45,6 +46,7 @@
 | GET | `/api/Zhaogq/news` | 科技新闻分页列表 |
 | GET | `/api/Zhaogq/news/categories` | 新闻分类 |
 | GET | `/api/Zhaogq/gallery` | 图文资讯列表 |
+| POST | `/api/Zhaogq/chat` | AI 聊天（代理 SiliconFlow，密钥存于 `backend/.env`） |
 
 统一响应格式：`{ "code": 0, "msg": "提示信息", "data": {...} }`，`code=0` 表示成功。
 

@@ -131,3 +131,29 @@
 
 ---
 
+## 2026-11-23 14:40:00
+
+**大模型：DeepSeek-V4.1-Flash**
+
+**提示词全文：**
+
+前提：完成之前的全栈项目，没完成的先完成全栈项目。在全栈项目完成的基础上进行此项。
+提示词：创建AI聊天页面。
+Api-key：sk-****（安全要求已脱敏，实际密钥仅保存在 backend/.env）
+curl --request POST \
+  --url `https://api.siliconflow.cn/v1/chat/completions` \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "messages": [
+      {"role": "system", "content": "你是一个有用的助手"},
+      {"role": "user", "content": "你好，请介绍一下你自己"}
+    ]
+  }'
+在控制台里输出发送给大模型的数据和从大模型接收到的数据。
+
+**实现说明：** API Key 写入 `backend/.env`（`SILICONFLOW_API_KEY`），前端只调用后端代理接口 `/api/Zhaogq/chat`；服务端控制台与浏览器控制台均输出收发数据。
+
+---
+

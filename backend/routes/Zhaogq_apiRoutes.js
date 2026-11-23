@@ -3,6 +3,7 @@ const express = require('express');
 const Zhaogq_newsController = require('../controllers/Zhaogq_newsController');
 const Zhaogq_galleryController = require('../controllers/Zhaogq_galleryController');
 const Zhaogq_dbController = require('../controllers/Zhaogq_dbController');
+const Zhaogq_chatController = require('../controllers/Zhaogq_chatController');
 
 const Zhaogq_router = express.Router();
 
@@ -20,5 +21,8 @@ Zhaogq_router.get('/Zhaogq/news/categories', Zhaogq_newsController.Zhaogq_getCat
 
 /* 图文资讯 */
 Zhaogq_router.get('/Zhaogq/gallery', Zhaogq_galleryController.Zhaogq_getGalleryList);
+
+/* AI 聊天（代理 SiliconFlow） */
+Zhaogq_router.post('/Zhaogq/chat', Zhaogq_chatController.Zhaogq_chat);
 
 module.exports = Zhaogq_router;
