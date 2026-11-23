@@ -5,6 +5,7 @@ const Zhaogq_galleryController = require('../controllers/Zhaogq_galleryControlle
 const Zhaogq_dbController = require('../controllers/Zhaogq_dbController');
 const Zhaogq_chatController = require('../controllers/Zhaogq_chatController');
 const Zhaogq_kbController = require('../controllers/Zhaogq_kbController');
+const Zhaogq_qiniuController = require('../controllers/Zhaogq_qiniuController');
 
 const Zhaogq_router = express.Router();
 
@@ -25,6 +26,9 @@ Zhaogq_router.get('/Zhaogq/gallery', Zhaogq_galleryController.Zhaogq_getGalleryL
 
 /* AI 聊天（代理 SiliconFlow） */
 Zhaogq_router.post('/Zhaogq/chat', Zhaogq_chatController.Zhaogq_chat);
+
+/* 七牛云 AI 在线客服（OpenAI 兼容接口） */
+Zhaogq_router.post('/Zhaogq/qiniu/chat', Zhaogq_qiniuController.Zhaogq_qiniuChat);
 
 /* 知识库（RAG）：上传解析、管理、问答 */
 Zhaogq_router.post('/Zhaogq/kb/upload', Zhaogq_kbController.Zhaogq_uploadMiddleware, Zhaogq_kbController.Zhaogq_uploadFile);

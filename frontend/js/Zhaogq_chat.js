@@ -12,7 +12,7 @@
 
   if (!Zhaogq_messagesEl) return;
 
-  const Zhaogq_endpoint = Zhaogq_getApiUrl('/Zhaogq/chat');
+  const Zhaogq_endpoint = Zhaogq_getApiUrl((document.body.dataset && document.body.dataset.apiUrl) || '/Zhaogq/chat');
   const Zhaogq_history = [];
   let Zhaogq_sending = false;
 

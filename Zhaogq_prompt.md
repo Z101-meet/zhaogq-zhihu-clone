@@ -169,3 +169,19 @@ curl --request POST \
 
 ---
 
+## 2026-11-23 15:30:00
+
+**大模型：DeepSeek-V4.1-Flash**
+
+**提示词全文：**
+
+四）使用七牛api-key完成在线客服：
+创建AI聊天页面。
+Model ID：qiniu/conatus-free
+Api-key：sk-****（安全要求已脱敏，实际密钥仅保存在 backend/.env 的 QINIU_API_KEY）
+OpenAI BaseURL：`https://api.qnaigc.com/v1`，在控制台里输出发送给大模型的数据和从大模型接收到的数据。
+
+**实现说明：** 新增 `qiniu.html` 在线客服页与后端代理接口 `/api/Zhaogq/qiniu/chat`；BaseURL 与密钥写入 `backend/.env`（`QINIU_BASE_URL`、`QINIU_API_KEY`）。联调时免费模型返回 429 `free_campaign_global_limit`（全局限流），接口已按统一格式返回错误信息。
+
+---
+

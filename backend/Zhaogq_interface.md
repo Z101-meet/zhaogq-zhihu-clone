@@ -368,3 +368,54 @@
 ```
 
 - 修改时间：2026-11-23 14:55:00
+
+---
+
+## 2026-11-23 · 七牛云在线客服
+
+### 接口路径：`/api/Zhaogq/qiniu/chat`
+
+- HTTP 方法：POST（Content-Type: application/json）
+- 上游接口：`https://api.qnaigc.com/v1/chat/completions`（OpenAI 兼容），模型 `qiniu/conatus-free`
+- 请求参数（含示例）：
+
+```json
+{
+  "messages": [
+    { "role": "user", "content": "你们支持七天无理由退货吗？" }
+  ]
+}
+```
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| messages | array | 是 | 对话消息列表，元素为 `{ role, content }`，role 支持 user / assistant / system |
+
+- 说明：后端自动追加客服 system 提示；`QINIU_API_KEY`、`QINIU_BASE_URL` 读取自 `backend/.env`，不返回前端；发送与接收数据打印在服务端控制台。
+- 请求示例：`POST http://localhost:8201/api/Zhaogq/qiniu/chat`
+- 响应格式（成功示例）：
+
+```json
+{
+  "code": 0,
+  "msg": "请求成功",
+  "data": {
+    "reply": "您好，我们支持签收后 7 天内无理由退货……",
+    "model": "qiniu/conatus-free",
+    "usage": { "prompt_tokens": 120, "completion_tokens": 64, "total_tokens": 184 },
+    "Zhaogq_duration": 2860
+  }
+}
+```
+
+- 响应格式（免费模型限流示例）：
+
+```json
+{
+  "code": 429,
+  "msg": "Too many requests for this free model (request_id: chatcmpl-xxx)",
+  "data": null
+}
+```
+
+- 修改时间：2026-11-23 15:35:00

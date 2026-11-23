@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- 姓名：赵国庆 | 学号：24002120201 | 时间：2026-11-23 | 大模型：DeepSeek-V4.1-Flash -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>在线客服（七牛云）| 知乎制作和模仿</title>
+  <link rel="stylesheet" href="css/Zhaogq_style.css" />
+</head>
+<body class="Zhaogq_body" data-api-url="/Zhaogq/qiniu/chat">
+  <header class="Zhaogq_topbar">
+    <div class="Zhaogq_topbarInner">
+      <a class="Zhaogq_logo" href="index.html">知乎</a>
+      <nav class="Zhaogq_topnav" aria-label="站点导航">
+        <a href="index.html">首页</a>
+        <a href="news.html">科技新闻</a>
+        <a href="gallery.html">图文资讯</a>
+        <a href="chat.html">AI 聊天</a>
+        <a href="kb.html">知识库</a>
+        <a href="qiniu.html" class="isActive">在线客服</a>
+        <a href="database.html">数据库测试</a>
+      </nav>
+      <div class="Zhaogq_topRight">
+        <div class="Zhaogq_status" id="Zhaogq_status">
+          <span class="Zhaogq_dot"></span>
+          <span id="Zhaogq_statusText">检测后端服务中…</span>
+        </div>
+        <button class="Zhaogq_loginBtn" type="button">登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="Zhaogq_main">
+    <div class="Zhaogq_pageHead">
+      <a class="Zhaogq_back" href="index.html">← 返回首页</a>
+      <h1>在线客服</h1>
+      <p>基于七牛云 AI 的 OpenAI 兼容接口（BaseURL：https://api.qnaigc.com/v1），API Key 仅保存在后端 .env；收发数据输出到浏览器控制台。</p>
+    </div>
+
+    <div class="Zhaogq_apiBar">
+      <strong>POST</strong>
+      <span class="Zhaogq_apiUrl" id="Zhaogq_apiUrl"></span>
+    </div>
+
+    <section class="Zhaogq_chatPanel">
+      <div class="Zhaogq_chatHead">
+        <span class="Zhaogq_avatar">客服</span>
+        <span class="Zhaogq_chatTitle">星图智能在线客服</span>
+        <span class="Zhaogq_modelBadge" id="Zhaogq_modelName">qiniu/conatus-free</span>
+        <button class="Zhaogq_chatClear" type="button" id="Zhaogq_clearBtn">清空对话</button>
+      </div>
+
+      <div class="Zhaogq_chatMessages" id="Zhaogq_chatMessages">
+        <div class="Zhaogq_chatEmpty" id="Zhaogq_chatEmpty">
+          <strong>您好，我是星图智能在线客服</strong>
+          可以咨询退换货、配送、保修等问题，人工客服请拨打 400-880-2020。
+        </div>
+      </div>
+
+      <div class="Zhaogq_quick" id="Zhaogq_quick">
+        <button type="button">你们支持七天无理由退货吗？</button>
+        <button type="button">订单一般多久发货？</button>
+        <button type="button">怎么联系人工客服？</button>
+      </div>
+
+      <div class="Zhaogq_chatInput">
+        <textarea id="Zhaogq_input" rows="1" placeholder="请输入您的问题，Enter 发送，Shift + Enter 换行"></textarea>
+        <button class="Zhaogq_btn" type="button" id="Zhaogq_sendBtn">发送</button>
+      </div>
+
+      <div class="Zhaogq_chatTools">
+        <span>Enter 发送 · Shift + Enter 换行</span>
+        <span id="Zhaogq_chatTip">免费模型可能限流，请稍后重试</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="Zhaogq_footer">
+    <span>赵国庆 · 24002120201 · 2026 · 项目类别：模仿</span>
+    <span><a href="index.html">首页</a> · <a href="chat.html">AI 聊天</a> · <a href="kb.html">知识库</a></span>
+  </footer>
+
+  <script src="js/Zhaogq_common.js"></script>
+  <script src="js/Zhaogq_chat.js"></script>
+</body>
+</html>

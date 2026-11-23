@@ -6,7 +6,7 @@
 - 项目类别：模仿
 - 技术栈：原生 HTML / CSS / JavaScript + Node.js / Express + MySQL
 
-仿知乎问答社区风格的信息流站点：顶部导航、科技热榜式新闻列表、图文「想法」卡片、数据库连接测试页、AI 聊天页（调用 SiliconFlow 大模型）、知识库问答页（RAG）。
+仿知乎问答社区风格的信息流站点：顶部导航、科技热榜式新闻列表、图文「想法」卡片、数据库连接测试页、AI 聊天页（调用 SiliconFlow 大模型）、知识库问答页（RAG）、七牛云在线客服页。
 
 ## 启动方式
 
@@ -32,7 +32,8 @@
 │   ├── news.html         科技新闻列表（仿热榜）
 │   ├── gallery.html      图文资讯列表（仿想法）
 │   ├── chat.html         AI 聊天（调用 SiliconFlow 大模型）
-│   └── kb.html           知识库问答（上传解析 + RAG）
+│   ├── kb.html           知识库问答（上传解析 + RAG）
+│   └── qiniu.html        在线客服（七牛云 AI，OpenAI 兼容）
 ├── AGENTS.md             项目开发规则
 ├── Zhaogq_prompt.md      开发指令记录
 └── 启动后端.bat          后端启动脚本
@@ -53,6 +54,7 @@
 | GET | `/api/Zhaogq/kb/files/:id/chunks` | 查看文件片段 |
 | DELETE | `/api/Zhaogq/kb/files/:id` | 删除文件及片段 |
 | POST | `/api/Zhaogq/kb/ask` | 基于知识库的问答（RAG） |
+| POST | `/api/Zhaogq/qiniu/chat` | 七牛云在线客服（qiniu/conatus-free） |
 
 统一响应格式：`{ "code": 0, "msg": "提示信息", "data": {...} }`，`code=0` 表示成功。
 
